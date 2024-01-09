@@ -1,0 +1,42 @@
+*{
+    text-align: center;
+    
+}
+
+.centered-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    /* min-height: 100vh; */
+  }
+
+#postListDiv {
+    max-width: 600px;
+    width: 100%;
+    padding: 15px; 
+    padding-top: 0;
+}
+
+.post-card {
+    border: 2px solid;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    padding: 10px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.card-item{
+    width: 100%;
+}
+
+#create-post-button {
+    margin-left: auto;
+    margin-right: auto;
+}
+.card-item > button {
+    margin-right: 5px;
+    margin-left: 5px;
+}

@@ -1,0 +1,26 @@
+nav {
+    border-bottom: solid 1.5px rgb(8, 31, 42);
+    border-right: solid 1.5px rgb(8, 31, 42);
+    border-left: solid 1.5px rgb(8, 31, 42);
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.nav-element {
+    margin: 3px 5px;
+}
+
+#logo {
+    font-family: 'Barriecito', cursive;
+    margin: 3px;
+    margin-right: 6px;
+}
+
+
+
+

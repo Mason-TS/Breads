@@ -1,0 +1,45 @@
+:root {
+    --darkmode-backgroundcolor:var(--darkmode-backgroundcolor), white;
+    --darkmode-color:var(--darkmode-color), aqua;
+    
+}
+
+.dark-mode {
+    background-color: var(--darkmode-backgroundcolor);
+    color: #fff;
+    border-color: var(--darkmode-color);
+    
+  }
+  a {
+    text-decoration: underline;
+     color: rgb(8, 31, 42);
+  }
+
+
+.dark-mode a {
+    color: var(--darkmode-color);
+}
+
+.dark-mode a:visited {
+    color:var(--darkmode-color);
+}
+
+.f-link .dark-mode {
+
+    color: var(--darkmode-color);
+}
+
+button{
+    background-color: var(--darkmode-backgroundcolor);
+    color: var(--darkmode-color), white;
+    display: inline-block;
+    padding: 1px 6px;
+    font-size: 12px;
+    border: 1px solid;
+    border-color: var(--darkmode-color);
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+}
+

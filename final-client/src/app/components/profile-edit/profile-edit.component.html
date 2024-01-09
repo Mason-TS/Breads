@@ -1,0 +1,26 @@
+<form (ngSubmit)="editProfile()">
+    <h1>Edit Profile</h1>
+    <span>First Name  </span>
+    <input placeholder="Enter First Name" type="text" name="firstName" [(ngModel)]="currentUser.firstName"><br><br>
+    <span>Last Name  </span>
+    <input placeholder="Enter Last Name" type="text" name="lastName" [(ngModel)]="currentUser.lastName"><br><br>
+    <span>State  </span>
+    <input placeholder="Enter State" type="text" name="state" [(ngModel)]="currentUser.state"><br><br>
+    <span>City  </span>
+    <input placeholder="Enter City" type="text" name="city" [(ngModel)]="currentUser.city" ><br><br>
+    <span>Bio   </span>
+    <input placeholder="Enter Bio" type="text" name="bio" [(ngModel)]="currentUser.bio"><br><br>
+
+    
+    <select [ngModelOptions]="{standalone: true}" [(ngModel)]="userGender">
+        <option default>Select Gender</option>
+        <option>Male</option>
+        <option>Female</option>
+    </select>
+    <br><br>
+   
+
+    <button>
+      Save Changes
+    </button>
+</form>

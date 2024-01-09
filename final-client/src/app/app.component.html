@@ -1,0 +1,33 @@
+<div id="totalDiv">
+  <nav [ngStyle]="{'border-color':darkMode == true ? 'aqua' : 'rgb(8, 31, 42)'}" role="navigation">
+
+    
+    
+      <div class="linksDiv" *ngIf="!isUserLoggedIn">
+        <a routerLink="/home" class="nav-element" title="Home">Home</a>
+      <span> | </span>
+      <a routerLink="/signup" class="nav-element" title="Sign Up">Register</a>
+      <span> | </span>
+      <a routerLink="/signin" class="nav-element" title="Sign In">Sign in</a>
+      <span> | </span>
+      <button (click)="toggleDarkMode()"><span *ngIf="darkMode">Light</span><span *ngIf="!darkMode">Dark</span></button>
+      </div>
+
+      <div class="linksDiv" *ngIf="isUserLoggedIn">
+        <a routerLink="/home" class="nav-element" title="Home">Home</a>
+      <span> | </span>
+        <a [routerLink]="['/profile',loggedInUser]" class="nav-element" >{{loggedInUser}}</a>
+        <span> | </span>
+        <a (click)="logOut()" class="f-link nav-element"  title="Logout">Logout</a>
+        <span> | </span>
+        <button  (click)="toggleDarkMode()"  class="nav-element"><span *ngIf="darkMode">Light</span><span *ngIf="!darkMode">Dark</span></button>
+        </div>
+
+        <h3 id="logo">Breads</h3>
+      
+  </nav>
+  <router-outlet></router-outlet>
+</div>
+
+
+

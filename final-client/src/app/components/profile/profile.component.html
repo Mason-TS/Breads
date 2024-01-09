@@ -1,0 +1,29 @@
+<div >
+    <button id="edit-btn" *ngIf="isCurrentUser" [routerLink]="['/profile-edit']">Edit Profile</button>
+</div>
+
+    <div id="profile-info">
+        <h2>{{currentProfile.firstName}} {{currentProfile.lastName}}<span *ngIf="currentProfile.gender"> - {{userGender}}</span></h2>
+        <h3>{{currentProfile.username}}</h3>
+        <h4>{{currentProfile.city}}<span *ngIf="currentProfile.city && currentProfile.state"> - </span>{{currentProfile.state}}</h4>
+        <div class="bioDiv" *ngIf="currentProfile.bio">
+            <p class="bio">{{currentProfile.bio}}</p>
+        </div>
+    </div>
+
+
+
+<div class="centered-container" *ngIf="postList">
+    <div *ngFor="let post of postList">
+        <div class="post-card">
+
+            <h3><a [routerLink]="['/profile', post.username]">{{post.username}}</a></h3>
+            <p>{{post.body}}</p>
+            <h4>{{post.postDate | date:'shortDate'}}</h4>
+            <div *ngIf="usernameCheck(post.username)">
+                <button class="card-item" [routerLink]="['/edit', post.postId]">Edit Post</button>
+                <button class="card-item" (click)="deletePost(post.postId)">Delete Post</button>
+            </div>
+
+        </div>
+    </div>

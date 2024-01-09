@@ -1,0 +1,26 @@
+<div>
+    <h1>Home</h1>
+    <button id="create-post-btn" [routerLink]="['/new']">Bake a new post</button>
+
+
+    <div class="centered-container">
+        <div id="postListDiv" *ngIf="postList">
+            <div *ngFor="let post of postList">
+                <div class="post-card">
+                    <h2><a class="card-item" [routerLink]="['/profile', post.username]">{{post.username}}</a></h2>
+                    <p class="card-item">{{post.body}}</p>
+                    <h4 class="card-item">{{post.postDate | date:'shortDate'}}</h4>
+
+
+                    <div class="card-item" *ngIf="usernameCheck(post.username)">
+                        <button [routerLink]="['/edit', post.postId]">Edit Post</button>
+                        <button (click)="deletePost(post.postId)">Delete Post</button>
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
